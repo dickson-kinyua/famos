@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const links = [
     "Home",
@@ -33,7 +35,9 @@ export default function Header() {
           <Link
             key={link}
             href={`/${link.toLowerCase()}`}
-            className="text-sm md:text-base lg:text-lg hover:text-yellow-400 hover:scale-105 transition"
+            className={`text-sm md:text-base lg:text-lg hover:text-yellow-400 hover:scale-105 transition ${
+              pathname === `/${link.toLowerCase()}` ? "text-yellow-400" : ""
+            }`}
           >
             {link}
           </Link>
@@ -75,7 +79,9 @@ export default function Header() {
               key={link}
               href={`/${link.toLowerCase()}`}
               onClick={() => setIsMenuOpen(false)}
-              className="text-lg hover:text-yellow-400 transition"
+              className={`text-lg hover:text-yellow-400 transition ${
+                pathname === `/${link.toLowerCase()}` ? "text-yellow-400" : ""
+              }`}
             >
               {link}
             </Link>

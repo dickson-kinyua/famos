@@ -4,7 +4,7 @@ import Vision from "@/sections/Vision";
 
 export default function About() {
   return (
-    <main className="bg-black pt-10 text-white min-h-screen">
+    <main className="bg-black pt-10 text-white min-h-screen ">
       <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-12">
           {/* Image */}
