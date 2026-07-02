@@ -3,7 +3,7 @@ import Header from "@/ui/Header";
 
 export default function Home() {
   return (
-    <main className="pt-16 flex flex-col items-center justify-center min-h-screen bg-[url('/images/bg.avif')] bg-cover bg-center bg-no-repeat relative">
+    <main className="px-4 py-8 flex flex-col items-center justify-between min-h-screen bg-[url('/images/bg.avif')] bg-cover bg-center bg-no-repeat relative">
       {/* Dark overlay */}
       {/* <div className="absolute inset-0 bg-black/55"></div> */}
       <Header />
